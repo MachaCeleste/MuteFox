@@ -6,6 +6,8 @@ namespace MuteFox;
 
 public abstract class STT
 {
+    public bool debugLogging = true;
+
     private WaveInEvent _waveIn;
     private MemoryStream _audioStream;
     private WhisperFactory _whisperFactory;
@@ -16,7 +18,7 @@ public abstract class STT
     {
         LogProvider.AddLogger((level, message) =>
         {
-            Log($"[{level}] {message}");
+            if (debugLogging) Log($"[{level}] {message}");
         });
         _whisperFactory = WhisperFactory.FromPath(modelPath);
         _processor = _whisperFactory.CreateBuilder().WithLanguage("en").Build();
