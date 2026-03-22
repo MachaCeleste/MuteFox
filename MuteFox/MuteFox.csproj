@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.3.0" />
+    <PackageReference Include="Whisper.net" Version="1.9.1-preview1" />
+    <PackageReference Include="Whisper.net.Runtime" Version="1.9.1-preview1" />
+    <PackageReference Include="Whisper.net.Runtime.Cuda" Version="1.9.1-preview1" />
+    <PackageReference Include="Whisper.net.Runtime.Cuda12.Windows" Version="1.9.1-preview1" />
+  </ItemGroup>
+
+</Project>
